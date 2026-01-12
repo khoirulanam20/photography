@@ -1,0 +1,282 @@
+/* Landing Page Custom Styles */
+
+/* Testimonial Styles */
+.testimonial-container {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.testimonial-icon {
+    font-size: 30px;
+    color: purple;
+    margin-bottom: 10px;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonial-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-rating {
+    color: purple;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+.testimonial-location {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Styling untuk Main Screen Title - Lebar penuh */
+.main-screen__title {
+    letter-spacing: 0.05em;
+    max-width: 100% !important;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Perlebar Main Screen Container - Full Width */
+section.main-screen .container--size-large,
+.main-screen .container--size-large,
+section.main-screen .main-screen__container.container--size-large,
+.main-screen .main-screen__container.container--size-large {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+}
+
+.main-screen__container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+}
+
+/* Pastikan container tidak memiliki constraint lebar */
+.main-screen .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 0 !important;
+}
+
+/* Pastikan section main-screen juga full width */
+section.main-screen {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Pastikan title juga memanfaatkan lebar penuh */
+.main-screen__title {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+@media (min-width: 576px) {
+    .main-screen__title {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    section.main-screen .container--size-large,
+    .main-screen .container--size-large,
+    section.main-screen .main-screen__container.container--size-large,
+    .main-screen .main-screen__container.container--size-large {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .main-screen__container {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-screen__title {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    section.main-screen .container--size-large,
+    .main-screen .container--size-large,
+    section.main-screen .main-screen__container.container--size-large,
+    .main-screen .main-screen__container.container--size-large {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .main-screen__container {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-screen__title {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+    section.main-screen .container--size-large,
+    .main-screen .container--size-large,
+    section.main-screen .main-screen__container.container--size-large,
+    .main-screen .main-screen__container.container--size-large {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+    .main-screen__container {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main-screen__title {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+
+    section.main-screen .container--size-large,
+    .main-screen .container--size-large,
+    section.main-screen .main-screen__container.container--size-large,
+    .main-screen .main-screen__container.container--size-large {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+
+    .main-screen__container {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}
+
+/* Styling untuk Slogan */
+.main-screen__slogan {
+    display: block;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 0.6em;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff !important;
+    margin-top: 0.5em;
+    letter-spacing: 0.08em;
+}
+
+@media (min-width: 576px) {
+    .main-screen__slogan {
+        font-size: 0.55em;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-screen__slogan {
+        font-size: 0.5em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-screen__slogan {
+        font-size: 0.45em;
+    }
+}
+
+/* Styling untuk Footer Logo - Perbesar dan Tengahkan (Tanpa mengubah layout) */
+.footer__logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -ms-grid-column-align: center !important;
+    justify-self: center !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+.footer__logo {
+    padding: 20px 20px 20px 20px !important;
+    height: auto !important;
+}
+
+.footer__logo img {
+    max-height: 180px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.footer__logo svg {
+    width: 118px !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+@media (min-width: 576px) {
+    .footer__logo {
+        padding: 24px 24px 24px 24px !important;
+    }
+
+    .footer__logo img {
+        max-height: 250px !important;
+    }
+
+    .footer__logo svg {
+        width: 148px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer__logo {
+        padding: 30px 30px 30px 30px !important;
+    }
+
+    .footer__logo img {
+        max-height: 300px !important;
+    }
+
+    .footer__logo svg {
+        width: 178px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .footer__logo {
+        padding: 35px 35px 35px 35px !important;
+    }
+
+    .footer__logo img {
+        max-height: 350px !important;
+    }
+
+    .footer__logo svg {
+        width: 198px !important;
+    }
+}

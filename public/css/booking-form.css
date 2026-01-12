@@ -1,0 +1,723 @@
+/* Booking Form Styles - Sesuai dengan profil.blade.php */
+.booking-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 19px;
+}
+
+@media (min-width: 1400px) {
+    .booking-container {
+        max-width: 1920px;
+        padding: 0 80px;
+    }
+}
+
+.booking-form-container {
+    background: #ffffff;
+    padding: 60px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .booking-form-container {
+        padding: 40px 30px;
+    }
+}
+
+.booking-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .form-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Menggunakan field class dari main.css untuk konsistensi */
+.field {
+    position: relative;
+    display: block;
+    width: 100%;
+    cursor: text;
+    margin-bottom: 40px;
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+.field input,
+.field textarea,
+.field select {
+    display: block;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 0 14px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: #000000;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    transition: all 0.3s ease;
+}
+
+/* Khusus untuk select, date, dan time - label langsung ke atas */
+.field select,
+.field input[type="date"],
+.field input[type="time"] {
+    color: #000000;
+}
+
+.field select:not([value=""]) + .field__hint,
+.field select:valid + .field__hint,
+.field input[type="date"] + .field__hint,
+.field input[type="time"] + .field__hint {
+    font-size: 12px;
+    color: #000000;
+    transform: translateY(-24px);
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    outline: none;
+    border-bottom-color: #ffc60a;
+}
+
+.field input:focus ~ .field__hint,
+.field textarea:focus ~ .field__hint,
+.field select:focus ~ .field__hint {
+    font-size: 12px;
+    color: #000000;
+    transform: translateY(-24px);
+}
+
+.field__hint {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    font-size: 15px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.field--filled .field__hint {
+    font-size: 12px;
+    color: #000000;
+    transform: translateY(-24px);
+}
+
+.field__hint ion-icon {
+    font-size: 1.2rem;
+    color: #ffc60a;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.form-help {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.field__error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Form Actions */
+.form-actions {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.submit-booking-btn {
+    display: inline-flex;
+    align-items: center;
+    min-width: 207px;
+    padding: 20px 40px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ffc60a;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.submit-booking-btn:focus {
+    outline: none;
+}
+
+@media (min-width: 992px) {
+    .submit-booking-btn:hover,
+    .submit-booking-btn:focus {
+        background-color: #000000;
+    }
+}
+
+.submit-booking-btn ion-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.back-booking-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .back-booking-btn:hover,
+    .back-booking-btn:focus {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+
+.back-booking-btn ion-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+/* Row untuk dua kolom */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* Select custom styling */
+.field select {
+    cursor: pointer;
+}
+
+.field select option {
+    padding: 10px;
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-container {
+        padding: 0 19px;
+    }
+
+    .field {
+        margin-bottom: 40px;
+    }
+
+    .form-actions {
+        margin-top: 40px;
+    }
+
+    .submit-booking-btn,
+    .back-booking-btn {
+        padding: 15px 30px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .submit-booking-btn {
+        min-width: 100%;
+    }
+
+    .back-booking-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .field {
+        margin-bottom: 30px;
+    }
+
+    .form-actions {
+        margin-top: 30px;
+    }
+
+    .submit-booking-btn,
+    .back-booking-btn {
+        padding: 12px 25px;
+    }
+}
+
+/* ============================================
+   BOOKING INDEX PAGE STYLES
+   ============================================ */
+
+/* Section Styles */
+.booking-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+/* Header Styles */
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.booking-title {
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.btn-primary-custom {
+    background-color: #ffc60a;
+    color: #000000;
+}
+
+.btn-primary-custom:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-secondary-custom {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Order Cards */
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.order-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.order-card-header {
+    padding: 20px 25px 15px;
+    border-bottom: 1px solid #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-id {
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-diterima {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-selesai {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-ditolak {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-diproses {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.order-card-body {
+    padding: 25px;
+}
+
+.order-info {
+    margin-bottom: 15px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+}
+
+.order-info:last-child {
+    margin-bottom: 0;
+}
+
+.order-info-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.order-info-value {
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.4;
+}
+
+.order-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #f8f9fa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    padding: 10px 20px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.btn-detail {
+    background-color: #ffc60a;
+    color: #000000;
+}
+
+.btn-detail:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-invoice {
+    background-color: #20c997;
+    color: #ffffff;
+}
+
+.btn-invoice:hover {
+    background-color: #17a2b8;
+}
+
+.btn-notes {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-notes:hover {
+    background-color: #c82333;
+}
+
+.btn-update {
+    background-color: #ffc60a;
+    color: #000000;
+}
+
+.btn-update:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-payment {
+    background-color: #fd7e14;
+    color: #ffffff;
+}
+
+.btn-payment:hover {
+    background-color: #e55a00;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    color: #ffc60a;
+    margin-bottom: 20px;
+}
+
+.empty-state-title {
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.empty-state-text {
+    font-size: 15px;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/* Layanan Dropdown Styles */
+.layanan-dropdown-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.layanan-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.layanan-select-label {
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.layanan-select {
+    padding: 12px 20px;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.layanan-select:hover {
+    background-color: #f7f7f7;
+}
+
+.layanan-select:focus {
+    outline: none;
+    border-color: #ffc60a;
+}
+
+.pdf-container {
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #e9ecef;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    min-width: 140px;
+}
+
+.pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: #ffc60a;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.pdf-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.pdf-link i {
+    font-size: 14px;
+}
+
+.no-pdf-message {
+    color: #6c757d;
+    font-family: "Neue Montreal", "Arial", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.no-pdf-message i {
+    font-size: 14px;
+}
+
+/* Booking Index Responsive */
+@media (max-width: 768px) {
+    .booking-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-title {
+        font-size: 1.8rem;
+    }
+
+    .header-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .layanan-dropdown-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .layanan-select-wrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pdf-container {
+        width: 100%;
+    }
+
+    .orders-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .order-card-header {
+        padding: 15px 20px 10px;
+    }
+
+    .order-card-body {
+        padding: 20px;
+    }
+
+    .order-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .layanan-select {
+        min-width: 100%;
+    }
+}
