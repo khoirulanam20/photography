@@ -48,80 +48,36 @@
                         </li>
                     @endguest
                     <li class="navigation__item">
-                        <a class="navigation__link animsition-link" href="/">Home<span
-                                class="navigation__link-icon">
-                                <svg width="12" height="13">
-                                    <use xlink:href="#link-arrow"></use>
-                                </svg>
-                            </span>
-                        </a>
+                        <a class="navigation__link animsition-link" href="/">Home</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__link animsition-link" href="/about">About<span
-                                class="navigation__link-icon">
-                                <svg width="12" height="13">
-                                    <use xlink:href="#link-arrow"></use>
-                                </svg>
-                            </span>
-                        </a>
+                        <a class="navigation__link animsition-link" href="/about">About</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__link animsition-link" href="/services">Services<span
-                                class="navigation__link-icon">
-                                <svg width="12" height="13">
-                                    <use xlink:href="#link-arrow"></use>
-                                </svg>
-                            </span>
-                        </a>
+                        <a class="navigation__link animsition-link" href="/services">Services</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__link animsition-link" href="/gallery">Gallery<span
-                                class="navigation__link-icon">
-                                <svg width="12" height="13">
-                                    <use xlink:href="#link-arrow"></use>
-                                </svg>
-                            </span>
-                        </a>
+                        <a class="navigation__link animsition-link" href="/gallery">Gallery</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__link animsition-link" href="/contact">Contact<span
-                                class="navigation__link-icon">
-                                <svg width="12" height="13">
-                                    <use xlink:href="#link-arrow"></use>
-                                </svg>
-                            </span>
-                        </a>
+                        <a class="navigation__link animsition-link" href="/contact">Contact</a>
                     </li>
                     @guest
                         <li class="navigation__item desktop-nav-link">
                             <a class="navigation__link animsition-link" href="{{ route('login') }}">
                                 Login
-                                <span class="navigation__link-icon">
-                                    <svg width="12" height="13">
-                                        <use xlink:href="#link-arrow"></use>
-                                    </svg>
-                                </span>
                             </a>
                         </li>
                         <li class="navigation__item desktop-nav-link">
                             <a class="navigation__link animsition-link" href="{{ route('register') }}">
                                 Register
-                                <span class="navigation__link-icon">
-                                    <svg width="12" height="13">
-                                        <use xlink:href="#link-arrow"></use>
-                                    </svg>
-                                </span>
                             </a>
                         </li>
                     @endguest
                     @auth
                         <li class="navigation__item desktop-nav-link">
                             <a class="navigation__link animsition-link" href="{{ route('booking.index') }}">
-                                My Order<span class="navigation__link-icon">
-                                    <svg width="12" height="13">
-                                        <use xlink:href="#link-arrow"></use>
-                                    </svg>
-                                </span>
+                                My Order
                             </a>
                         </li>
                     @endauth
@@ -295,12 +251,13 @@
 
         html body header.header.__js_fixed-header,
         html body header.header.__js_fixed-header.header--white-text {
-            background-color: #ffc60a !important;
-            backdrop-filter: none !important;
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: saturate(180%) blur(20px) !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
         }
 
         html body header.header.__js_fixed-header.is-fixed {
-            background-color: #fd969a !important;
+            background-color: rgba(255, 255, 255, 0.95) !important;
         }
 
         html body header.header.__js_fixed-header .header__container {
@@ -314,16 +271,21 @@
 
         html body .header__mobile,
         html body .mobile-canvas {
-            background-color: #ffc60a !important;
+            background-color: #ffffff !important;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.1) !important;
         }
 
         html body .menu-toggle__line {
-            background-color: #000 !important;
+            background-color: #1d1d1f !important;
         }
 
         html body header.header.__js_fixed-header .navigation__link,
         html body header.header.__js_fixed-header .user-name {
-            color: #000 !important;
+            color: #1d1d1f !important;
+        }
+        
+        html body .navigation__link-icon svg {
+            fill: #1d1d1f !important;
         }
     }
 

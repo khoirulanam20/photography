@@ -36,7 +36,7 @@
                         <div class="row align-items-end" data-aos="fade-up">
                             <div class="col-4 col-md-5 col-xl-4">
                                 <a class="about-video-section__more arrow-link" href="{{ route('about') }}">
-                                    <span class="arrow-link__text">About us</span>
+                                    <span class="arrow-link__text" style="color: black !important;">About us</span>
                                     <span class="arrow-link__icon">
                                         <svg width="75" height="75">
                                             <use xlink:href="#link-arrow"></use>
