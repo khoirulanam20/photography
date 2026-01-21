@@ -782,7 +782,7 @@ a:focus {
 .arrow-link__text {
     font-size: 14px;
     line-height: 1.2;
-    color: #000000;
+    color: #ffffff;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -802,6 +802,7 @@ a:focus {
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
     -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
+    fill: #ffffff;
 }
 
 @media (min-width: 992px) {
@@ -9338,7 +9339,7 @@ input[type="number"] {
 }
 
 .about-us__banner .first-banner__title span {
-    color: #0066cc;
+    color: #ffffff;
 }
 
 .about-us__stat {
@@ -12905,13 +12906,21 @@ svg use,
     opacity: 0.9 !important;
 }
 
-/* Fix "white on white" arrows in "Our Services" section */
+/* Fix "white on white" arrows in "Our Services" section - Must be after general rule */
 .our-services .arrow-link--white {
-    color: var(--apple-text) !important;
+    color: #ffffff !important;
 }
 
-.our-services .arrow-link__text {
-    color: var(--apple-text) !important;
+.our-services .arrow-link--white .arrow-link__text {
+    color: #ffffff !important;
+}
+
+.our-services .arrow-link--white .arrow-link__icon svg,
+.our-services__more.arrow-link--white .arrow-link__icon svg,
+.our-services .our-services__more.arrow-link--white .arrow-link__icon svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    opacity: 1 !important;
 }
 
 /* Gallery Hover Fix */
@@ -13067,4 +13076,12 @@ svg use,
 
 ::-webkit-scrollbar-thumb:hover {
     background: #acacb0;
+}
+
+/* Force white arrow in our-services section - Highest priority */
+section.our-services .our-services__more.arrow-link--white .arrow-link__icon svg,
+section.our-services .arrow-link--white .arrow-link__icon svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    opacity: 1 !important;
 }

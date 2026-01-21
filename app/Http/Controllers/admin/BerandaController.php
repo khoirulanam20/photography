@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Beranda;
+use App\Models\Tentang;
+use App\Models\Galeri;
+use App\Models\Layanan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -17,7 +20,11 @@ class BerandaController extends Controller
     public function index()
     {
         $berandas = Beranda::all();
-        return view('page_admin.beranda.index', compact('berandas'));
+        $tentang = Tentang::first();
+        $projects = Galeri::latest()->take(4)->get();
+        $services = Layanan::latest()->take(4)->get();
+        
+        return view('page_admin.beranda.index', compact('berandas', 'tentang', 'projects', 'services'));
     }
 
 

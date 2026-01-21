@@ -13,6 +13,7 @@
                     <h1 class="first-banner__title heading heading--size-large text-white">
                         <br>
                         <span class="text-white" style="font-size: 5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">{{ $tentang->judul ?? 'Judul Tentang 2' }}</span>
+                        
                     </h1>
                 </div>
             </div>
@@ -61,11 +62,6 @@
                             <div class="col-12 col-md-auto col-xl-2 ml-auto text-md-right" data-aos="fade-up">
                                 <a class="our-services__more arrow-link--white arrow-link" href="services.html">
                                     <span class="arrow-link__text">View all</span>
-                                    <span class="arrow-link__icon">
-                                        <svg width="75" height="75">
-                                            <use xlink:href="#link-arrow"></use>
-                                        </svg>
-                                    </span>
                                 </a>
                             </div>
                         </div>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Tentang;
+use App\Models\Tim;
+use App\Models\Layanan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -19,7 +21,9 @@ class TentangController extends Controller
     public function index()
     {
         $tentang = Tentang::all();
-        return view('page_admin.tentang.index', compact('tentang'));
+        $teams = Tim::latest()->get();
+        $services = Layanan::latest()->get();
+        return view('page_admin.tentang.index', compact('tentang', 'teams', 'services'));
     }
 
     /**
