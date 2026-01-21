@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-8 col-md-7 col-xl-8">
                                 <div class="about-video-section__text" data-aos="fade-up">
-                                    {{ $tentang->deskripsi ?? 'We make our customers products valuable in the eyes of customers. To do this, we analyze and study people, build long-term strategies for interacting with them, develop creative ideas and create a bright design. We use all opportunities to solve business problems.' }}
+                                    {!! $tentang->deskripsi ?? 'We make our customers products valuable in the eyes of customers. To do this, we analyze and study people, build long-term strategies for interacting with them, develop creative ideas and create a bright design. We use all opportunities to solve business problems.' !!}
                                 </div>
                             </div>
                         </div>

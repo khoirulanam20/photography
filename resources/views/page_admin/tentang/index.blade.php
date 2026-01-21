@@ -204,16 +204,16 @@
                                 </div>
                             </div>
 
-                            <div class="stats-row mt-5 border-top pt-4">
+                            <div class="stats-row mt-5 border-top pt-4" style="display: flex; justify-content: space-around; background: #f8f9fc; padding: 20px; border-radius: 10px;">
                                 @php
                                     $hitungan = is_array($item->hitungan) ? $item->hitungan : json_decode($item->hitungan, true);
                                     $keterangan = is_array($item->keterangan_hitungan) ? $item->keterangan_hitungan : json_decode($item->keterangan_hitungan, true);
                                 @endphp
                                 @if($hitungan)
                                     @foreach($hitungan as $idx => $val)
-                                        <div class="stat-box">
-                                            <span class="stat-num" style="font-size: 1.8rem;">{{ $val }}</span>
-                                            <span class="stat-label" style="font-size: 0.65rem;">{!! nl2br(e($keterangan[$idx] ?? '')) !!}</span>
+                                        <div class="stat-box" style="text-align: center;">
+                                            <span class="stat-num" style="display: block; font-size: 1.8rem; font-weight: 800; color: #4e73df;">{{ $val }}</span>
+                                            <span class="stat-label" style="font-size: 0.65rem; color: #858796; text-transform: uppercase;">{!! nl2br(e($keterangan[$idx] ?? '')) !!}</span>
                                         </div>
                                     @endforeach
                                 @endif

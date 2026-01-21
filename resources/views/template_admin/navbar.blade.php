@@ -42,27 +42,37 @@
                     </li>
 
                     <li class="pc-item pc-caption">
+                        <label>Web Builder</label>
+                        <i class="ti ti-layout-2"></i>
+                    </li>
+                    <li class="pc-item">
+                        <a href="{{ route('beranda.index') }}" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-home"></i></span>
+                            <span class="pc-mtext">Halaman Beranda</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="{{ route('tentang.index') }}" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-info-circle"></i></span>
+                            <span class="pc-mtext">Halaman Tentang</span>
+                        </a>
+                    </li>
+
+                    <li class="pc-item pc-caption">
                         <label>Data Admin</label>
                         <i class="ti ti-dashboard"></i>
                     </li>
                     <li class="pc-item">
                         <a href="{{ route('profil.index') }}" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-user"></i></span>
-                            <span class="pc-mtext">Profil</span>
-                        </a>
-                    </li>
-
-                    <li class="pc-item">
-                        <a href="{{ route('beranda.index') }}" class="pc-link">
-                            <span class="pc-micon"><i class="ti ti-home"></i></span>
-                            <span class="pc-mtext">Beranda</span>
+                            <span class="pc-mtext">Profil Perusahaan</span>
                         </a>
                     </li>
 
                     <li class="pc-item">
                         <a href="{{ route('galeri.index') }}" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-photo"></i></span>
-                            <span class="pc-mtext">Galeri</span>
+                            <span class="pc-mtext">Galeri Proyek</span>
                         </a>
                     </li>
 
@@ -77,13 +87,6 @@
                         <a href="{{ route('layanan.index') }}" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-briefcase"></i></span>
                             <span class="pc-mtext">Layanan (Service)</span>
-                        </a>
-                    </li>
-
-                    <li class="pc-item">
-                        <a href="{{ route('tentang.index') }}" class="pc-link">
-                            <span class="pc-micon"><i class="ti ti-info-circle"></i></span>
-                            <span class="pc-mtext">Tentang</span>
                         </a>
                     </li>
 

@@ -7,6 +7,7 @@ use App\Models\Beranda;
 use App\Models\Tentang;
 use App\Models\Layanan;
 use App\Models\Profil;
+use App\Models\Tim;
 
 class AboutController extends Controller
 {
@@ -15,6 +16,7 @@ class AboutController extends Controller
         $beranda = Beranda::first();
         $tentang = Tentang::first();
         $profil = Profil::first();
+        $teams = Tim::latest()->get();
 
         // Ambil layanan ID 1-4 dengan semua galerinya
         $layanans = Layanan::with('galeris')
@@ -22,6 +24,6 @@ class AboutController extends Controller
             ->orderBy('id', 'asc')
             ->get();
 
-        return view('page_web.tentang.index', compact('beranda', 'tentang', 'layanans', 'profil'));
+        return view('page_web.tentang.index', compact('beranda', 'tentang', 'layanans', 'profil', 'teams'));
     }
 }
