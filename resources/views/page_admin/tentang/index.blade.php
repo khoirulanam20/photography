@@ -221,29 +221,6 @@
                         </div>
                     </div>
 
-                    <!-- Section 3: Team Preview -->
-                    <div class="section-block">
-                        <div class="section-header">
-                            <h5 class="section-title"><i class="ti ti-users me-2"></i>3. Team Preview</h5>
-                            <a href="{{ route('tim.index') }}" class="btn btn-sm btn-outline-primary">
-                                <i class="ti ti-external-link"></i> Manage Team
-                            </a>
-                        </div>
-                        <div class="section-content">
-                            <div class="team-grid">
-                                @forelse($teams->take(4) as $member)
-                                    <div class="team-item">
-                                        <img src="{{ asset('upload/tim/' . $member->gambar) }}" alt="{{ $member->nama }}">
-                                        <span class="team-name">{{ $member->nama }}</span>
-                                        <span class="team-pos">{{ $member->jabatan }}</span>
-                                    </div>
-                                @empty
-                                    <div class="col-12 py-3 text-center text-muted">Belum ada anggota tim.</div>
-                                @endforelse
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Section 4: Services Preview -->
                     <div class="section-block">
                         <div class="section-header">
